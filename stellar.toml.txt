@@ -1,0 +1,26 @@
+NETWORK_PASSPHRASE="Public Global Albedo Network ; "
+URI_REQUEST_SIGNING_KEY="GDTMEO5J5HSK35KHD7CJBUB576EFVSFXMXHACV7PORO36Z7AIHHKCJH2"
+SIGNING_KEY = "GDTMEO5J5HSK35KHD7CJBUB576EFVSFXMXHACV7PORO36Z7AIHHKCJH2"
+FEDERATION_SERVER="https://api.scopuly.com/federation"
+
+ACCOUNTS=[
+"GDTMEO5J5HSK35KHD7CJBUB576EFVSFXMXHACV7PORO36Z7AIHHKCJH2",
+"GCC3ASQTLRR5DR3QUYQZAXN7VP5NFF5UIUVR6C3TWDJYSMNDERBCDNJ5"]
+
+[DOCUMENTATION]
+ORG_NAME="Albedo"
+ORG_URL="https://scopuly.com"
+ORG_LOGO="https://scopuly.com/img/logo/500x200.png"
+ORG_DESCRIPTION="Albedo Network - Stellar Wallet & SDEX. A simple and secure cross-platform Stellar wallet that gives you the most complete control over your Stellar account. In Scopuly, you can: securely store and transfer crypto assets; make cross-border multicurrency payments; buy / sell crypto for fiat; issue your own tokens and trade on the SDEX decentralized exchange in real time with no fees. Scopuly is the perfect way to decentralize, store, manage, invest, trade, pay and move crypto assets."
+
+
+[[CURRENCIES]]
+code="ALB"
+name="Albedo"
+issuer="GCC3ASQTLRR5DR3QUYQZAXN7VP5NFF5UIUVR6C3TWDJYSMNDERBCDNJ5"
+desc="Albedo Network is an access, liquidity and rewards token. Albedo is a high APY yield token from +10% to +14% APY rewards holders, liquidity providers, traders and contributes to the development of the Scopuly ecosystem. Earn interest on your SCOP simply by holding tokens in your balance. Compound interest payments every 24 hours."
+conditions="Total issued Imposible Albedo Network. Further emission is not possible."
+image="https://scopuly.com/img/logo/icon.png"
+status="live"
+display_decimals=7
+fixed_number=10000000000
