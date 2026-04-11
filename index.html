@@ -1,10 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Website Saya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QLUMENS - Premium Token Coin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Halo dari Albedo Premeium</h1>
-    <p>Website ini sudah aktif!</p>
+    <!-- Header -->
+    <header>
+        <nav>
+            <<div class="token-symbol">
+             <img src="icon.png" alt="icon" /></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#token">Token</a></li>
+                <li><a href="#swap">Swap</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+            <div class="header-actions">
+                <button class="connect-wallet-btn" id="connectWallet">
+                    <i class="fab fa-ethereum"></i> Connect Wallet
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>QLUMENS <span>Premium Token</span></h1>
+                <p>Revolutionizing the future of finance with the most secure and profitable premium token.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-price="$0.247">$0.247</span>
+                        <span class="stat-label">Current Price</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-change="+12.5%">+12.5%</span>
+                        <span class="stat-label">24h Change</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-holders="1.2M">1.2M</span>
+                        <span class="stat-label">Holders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-volume="$2.4M">$2.4M</span>
+                        <span class="stat-label">24h Volume</span>
+                    </div>
+                </div>
+            </div>
+            <div class="token-card">
+                <div class="token-symbol">
+                <img src="icon.png" alt="icon" /></div>
+                <div class="token-price">$0.247</div>
+                <div class="token-change">
+                    <i class="fas fa-arrow-up"></i> +12.5% (24h)
+                </div>
+                <a href="#swap" class="swap-btn">Swap Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Info Section -->
+    <section id="token" class="token-info">
+        <div class="container">
+            <h2 class="section-title">Token <span>Information</span></h2>
+            <div class="token-data-grid">
+                <div class="token-overview">
+                    <div class="token-header">
+                        <div class="token-logo">
+                            <span>⭕</span>
+                            <h3>QLUMENS</h3>
+                        </div>
+                        <div class="token-actions">
+                            <button class="btn-primary"><i class="fas fa-share-alt"></i> Add to Wallet</button>
+                            <button class="btn-secondary"><i class="fas fa-chart-line"></i> Chart</button>
+                        </div>
+                    </div>
+                    <div class="token-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Price</span>
+                            <span class="metric-value">$0.247</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Market Cap</span>
+                            <span class="metric-value">$24.7M</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Liquidity</span>
+                            <span class="metric-value">$4.8M</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">FDV</span>
+                            <span class="metric-value">$24.7M</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="token-contract">
+                    <h4>Contract Address</h4>
+                    <div class="contract-address">
+                        <code>0x1234abcd5678efgh9012ijkl3456mnop7890qrst</code>
+                        <button class="copy-btn" onclick="copyContract()">📋 Copy</button>
+                    </div>
+                    <div class="token-links">
+                        <a href="#" class="token-link"><i class="fab fa-ethereum"></i> Etherscan</a>
+                        <a href="#" class="token-link"><i class="fab fa-bsc"></i> BscScan</a>
+                        <a href="#" class="token-link"><i class="fas fa-globe"></i> DexTools</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swap Section -->
+    <section id="swap" class="swap-section">
+        <div class="container">
+            <h2 class="section-title">Swap <span>QLUMENS</span></h2>
+            <div class="swap-container">
+                <div class="swap-card">
+                    <div class="swap-input-group">
+                        <label>From</label>
+                        <div class="input-wrapper">
+                            <div class="token-selector">
+                                <img src="https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.png" alt="ETH" class="token-icon">
+                                <span>ETH</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <input type="number" placeholder="0.0" class="amount-input" id="fromAmount">
+                        </div>
+                    </div>
+                    <div class="swap-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="swap-input-group">
+                        <label>To</label>
+                        <div class="input-wrapper">
+                            <div class="token-selector active">
+                                <span class="token-symbol-large">⭕</span>
+                                <span>QLUMENS</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <input type="number" placeholder="0.0" class="amount-input" id="toAmount" readonly>
+                        </div>
+                    </div>
+                    <div class="swap-details">
+                        <div class="detail-row">
+                            <span>Price</span>
+                            <span id="swapPrice">$0.247</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Slippage</span>
+                            <span>0.5%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>Route</span>
+                            <span>ETH → QLUMENS</span>
+                        </div>
+                    </div>
+                    <button class="swap-button" id="swapButton">
+                        <i class="fas fa-exchange-alt"></i> Swap
+                    </button>
+                    <div class="wallet-info" id="walletInfo" style="display: none;">
+                        <i class="fas fa-wallet"></i>
+                        <span id="walletAddress">Connect your wallet first</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why <span>Choose QLUMENS?</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>High Security</h3>
+                    <p>Complete audit by professional security team with verified smart contracts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Transactions</h3>
+                    <p>Instant confirmation with low fees and high throughput for all transactions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Growth Potential</h3>
+                    <p>Deflationary algorithm and staking rewards for long-term value appreciation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Solid Community</h3>
+                    <p>Supported by a global active community committed to project success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Project <span>Roadmap</span></h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>Q1 2024</h3>
+                        <p>✅ Token Launch<br>✅ DEX Listing<br>✅ Global Marketing</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>Q2 2024</h3>
+                        <p>✅ CEX Listing<br>✅ Staking Platform<br>✅ Partnership Deals</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>Q3 2024</h3>
+                        <p>🔄 NFT Marketplace<br>🔄 DeFi Integration<br>🔄 Mobile Wallet</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <h3>Q4 2024</h3>
+                        <p>🔄 Mainnet Launch<br>🔄 Governance DAO<br>🔄 Global Expansion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Join the Revolution?</h2>
+            <p>QLUMENS is more than just a token - it's the future of decentralized finance.</p>
+            <a href="#swap" class="btn-primary large">Start Swapping Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QLUMENS</h3>
+                    <p>The premium token for the future of finance. Secure, fast, and profitable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <a href="#swap">Swap</a>
+                    <a href="#">Staking</a>
+                    <a href="#">NFT</a>
+                    <a href="#">Governance</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Developers</h3>
+                    <a href="#">Docs</a>
+                    <a href="#">API</a>
+                    <a href="#">Contract</a>
+                    <a href="#">Audit</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 QLUMENS. All rights reserved. | Not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
